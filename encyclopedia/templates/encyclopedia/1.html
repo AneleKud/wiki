@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block nav %}
+    <h4> edit</h4> 
+{% endblock %}
+
+{% block body %}
+<h6>Edit article about {{ title }}</h6>
+<div>{{ text }}</div>
+
+{% endblock %}

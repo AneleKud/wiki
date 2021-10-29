@@ -1,0 +1,27 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit {{ title }}
+{% endblock %}
+
+{% block nav %}
+     
+{% endblock %}
+
+{% block body %}
+<h6>Edit article about {{ title }}</h6>
+<form action="{% url 'saveEdit' title %}" method="post">
+    {% csrf_token %}
+    
+    Text of article of "{{ title }}" contains:<br>
+    {{ form }}
+    <!--
+    <input type="hidden" name="title">
+    <textarea name="content" id="" cols=200px rows=100px>{{ text }}</textarea>
+    !-->
+    
+    <br>
+    <input type="submit" value="Редагувати статтю">
+
+</form>
+{% endblock %}
