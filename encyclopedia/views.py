@@ -15,8 +15,6 @@ def index(request):
         "entries": util.list_entries()
     })
 
-
-
 # New Article
 class NewArticleForm(forms.Form):
     title = forms.CharField(widget=forms.TextInput(attrs={'size': '50'}), max_length=150)
